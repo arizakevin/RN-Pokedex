@@ -7,7 +7,7 @@ export interface Pokemon {
   url: string;
   imageUrl: string;
 }
-export const getPokemon = async (limit = 2000): Promise<Pokemon[]> => {
+export const getPokemon = async (limit = 1017): Promise<Pokemon[]> => {
   const response = await fetch(
     `https://pokeapi.co/api/v2/pokemon?limit=${limit}`
   );
