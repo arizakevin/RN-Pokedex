@@ -24,9 +24,9 @@ This Pokedex app is not just a tool for Pokémon enthusiasts but also a demonstr
 
 ## Screenshots
 
-### Details View
+### Detail View
 
-<img src="screenshots/details.png" alt="Details View" width="300"/>
+<img src="screenshots/detail.png" alt="Details View" width="300"/>
 
 ### Favorites View
 
