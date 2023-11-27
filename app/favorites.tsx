@@ -13,7 +13,7 @@ import Animated, {
 
 const Favorites = () => {
   const [keys, setKeys] = useState<string[]>(storage.getAllKeys());
-  const [data, setData] = useState<PokemonDetail[]>([]);
+  const [data, setData] = useState<PokemonDetail[] | undefined>();
 
   const pokemonQueries = useQueries({
     queries: keys.map((key) => {
@@ -35,13 +35,22 @@ const Favorites = () => {
   const removeFavorite = (pokemonId: number) => {
     storage.delete(`favorite-${pokemonId}`);
     setKeys(storage.getAllKeys());
+    if (!data) return;
     setData(data.filter((pokemon) => pokemon.id !== pokemonId));
   };
+
+  if (!allQueriesFinished || !data) {
+    return (
+      <View style={styles.noFavoritesContainer}>
+        <Text style={styles.noFavoritesText}>Loading...</Text>
+      </View>
+    );
+  }
 
   if (data.length === 0) {
     return (
       <View style={styles.noFavoritesContainer}>
-        <Text style={styles.noFavoritesText}>No favorites</Text>
+        <Text style={styles.noFavoritesText}>You have no favorites yet!</Text>
       </View>
     );
   }
