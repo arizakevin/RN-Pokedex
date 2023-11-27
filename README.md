@@ -26,12 +26,12 @@ This Pokedex app is not just a tool for Pokémon enthusiasts but also a demonstr
 
 ### Details View
 
-![Details View](screenshots/details.png)
+<img src="screenshots/details.png" alt="Details View" width="300"/>
 
 ### Favorites View
 
-![Favorites View](screenshots/favorites.png)
+<img src="screenshots/favorites.png" alt="Favorites View" width="300"/>
 
 ### List View
 
-![List View](screenshots/list.png)
+<img src="screenshots/list.png" alt="List View" width="300"/>
